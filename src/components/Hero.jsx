@@ -48,7 +48,7 @@ export default function Hero() {
               reclamo de aduana, negociación de tarifa— en inglés.
             </p>
 
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-9 mr-16 flex flex-col gap-4 sm:mr-0 sm:flex-row">
               <a
                 href="#contacto"
                 className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-8 py-4 text-base font-bold text-slate-950 shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400"
