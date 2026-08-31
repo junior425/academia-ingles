@@ -7,7 +7,7 @@ const DIAGNOSTIC_MESSAGE =
 
 const BADGES = [
   { value: "8 meses", label: "en vez de 18 de instituto" },
-  { value: "100%", label: "online y en vivo" },
+  { value: "Cali", label: "presencial · online en todo el mundo" },
   { value: "Chunks", label: "bloques que sí se usan" },
   { value: "3 públicos", label: "empresas, adultos y niños" },
 ];
@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-brand-700">
-              Inglés online · Método por bloques
+              Presencial en Cali · Online en todo el mundo
             </span>
 
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-brand-900 sm:text-5xl">
@@ -53,9 +53,10 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-              Aprende de forma 100% online con nuestro método léxico por bloques
-              (Chunks). Programas especializados para empresas y carreras
-              profesionales, y cursos dinámicos para adultos, viajes y niños.
+              Aprende con nuestro método léxico por bloques (Chunks): presencial
+              en Cali u online en vivo desde cualquier país. Programas
+              especializados para empresas y carreras profesionales, y cursos
+              dinámicos para adultos, viajes y niños.
             </p>
 
             <div className="mt-8 mr-16 flex flex-col gap-4 sm:mr-0 sm:flex-row">
@@ -63,7 +64,7 @@ export default function Hero() {
                 href="#programas"
                 className="inline-flex items-center justify-center rounded-full bg-brand-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700"
               >
-                Ver Programas Online
+                Ver Programas
               </a>
               <a
                 href={whatsappLink(DIAGNOSTIC_MESSAGE)}

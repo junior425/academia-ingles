@@ -23,8 +23,8 @@ export const COMPARISON_ROWS = [
   },
   {
     criterion: "Modalidad",
-    traditional: "Horarios fijos y desplazamientos a la sede.",
-    ours: "100% online, en vivo, con micro-aprendizaje asíncrono entre clases.",
+    traditional: "Horarios fijos y desplazamientos obligatorios a la sede.",
+    ours: "Presencial en Cali u online en vivo desde cualquier país, con micro-aprendizaje asíncrono entre clases.",
   },
   {
     criterion: "Tiempo hasta ver resultados",

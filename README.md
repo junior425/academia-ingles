@@ -1,7 +1,7 @@
-# Fluent Path — Landing Page de Inglés Online (Empresas, Adultos y Niños)
+# Fluent Path — Landing Page de Inglés Presencial (Cali) y Online
 
 Landing page B2B/B2C en React + Vite + Tailwind CSS para una academia de inglés
-100% online con método de bloques léxicos (lexical chunking): programas ESP para
+presencial en Cali y online en todo el mundo, con método de bloques léxicos (lexical chunking): programas ESP para
 empresas y profesionales, conversación para adultos y viajes, y Kids Method para
 niños. Paleta clara y vibrante (azul, naranja, cyan, coral) con fotografías de
 Unsplash.
@@ -10,15 +10,16 @@ Producción: https://academia-ingles-green.vercel.app
 
 ## Secciones
 
-- **Hero**: headline "Domina el Inglés Real en Tiempo Récord", CTAs "Ver Programas
-  Online" y "Agendar Diagnóstico / Clases", badges y galería de fotos
+- **Hero**: headline "Domina el Inglés Real en Tiempo Récord", CTAs "Ver Programas"
+  y "Agendar Diagnóstico / Clases", badges y galería de fotos
   (profesionales, aeropuerto, niños).
 - **Diferenciadores**: trabajo, viajes y familia con tarjetas fotográficas.
 - **Selector de audiencias (tabs)**: Empresas y Profesionales (ESP), Adultos y
   Viajes, Niños y Juniors (Kids Method), cada uno con 4 tarjetas con foto.
 - **Metodología interactiva de 5 pasos**: Audio Input → Chunk Noticing →
   L1 Mental Hack → Block Mutation → Final Challenge, con color, icono y foto por paso.
-- **Modalidad**: 100% online, grupal en vivo, 1 a 1, micro-aprendizaje asíncrono
+- **Modalidad**: presencial en Cali u online en vivo, grupal, 1 a 1,
+  micro-aprendizaje asíncrono
   y horarios flexibles.
 - **Currículo por industria (tabs)**: roadmaps de 8 meses para Logística y Freight
   Forwarding (por defecto), Medicina, Ingeniería y Ejecutivos & Ferias.

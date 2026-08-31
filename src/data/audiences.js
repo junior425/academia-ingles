@@ -46,7 +46,8 @@ export const AUDIENCES = [
     tab: "Adultos y Viajes",
     badge: "General & Conversacional",
     title: "Adultos y Viajes (Inglés General & Conversacional)",
-    tagline: "Habla desde la primera clase, aunque tu viaje sea el mes que viene",
+    tagline:
+      "Habla desde la primera clase, aunque tu viaje sea el mes que viene",
     description:
       "Speaking acelerado con los bloques que de verdad se usan en aeropuertos, hoteles, entrevistas y conversaciones cotidianas. Ideal si viajas, te mudas al exterior o quieres perder el miedo a hablar.",
     accent: "aqua",
@@ -88,7 +89,7 @@ export const AUDIENCES = [
     title: "Niños y Juniors (Kids Method)",
     tagline: "Aprenden inglés jugando, con historias y videos interactivos",
     description:
-      "Clases 100% online, dinámicas y cortas, con videos, storytelling animado y bloques de lenguaje que los niños repiten con gusto. Nada de listas de vocabulario ni tareas aburridas.",
+      "Clases online o presenciales, dinámicas y cortas, con videos, storytelling animado y bloques de lenguaje que los niños repiten con gusto. Nada de listas de vocabulario ni tareas aburridas.",
     accent: "mango",
     photo: PHOTOS.kidsClass,
     cta: "Quiero clases para mis hijos",
