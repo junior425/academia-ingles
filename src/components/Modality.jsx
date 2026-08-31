@@ -3,17 +3,24 @@ import { PHOTOS, unsplash } from "../data/images";
 
 const FORMATS = [
   {
-    icon: "🎥",
-    title: "Clases en vivo grupales",
+    icon: "🌎",
+    title: "Online en vivo, desde cualquier país",
     detail:
-      "Grupos pequeños por nivel y objetivo, con roleplays entre compañeros y coach en vivo.",
+      "Grupos pequeños por nivel y objetivo, con roleplays entre compañeros y coach en vivo, sin importar tu zona horaria.",
     chip: "bg-brand-100 text-brand-700",
+  },
+  {
+    icon: "🏢",
+    title: "Presencial en Cali",
+    detail:
+      "Vamos a tu empresa o nos vemos en un punto acordado de la ciudad, con el mismo método y los mismos casos reales.",
+    chip: "bg-coral-100 text-coral-600",
   },
   {
     icon: "🙋",
     title: "Sesiones 1 a 1",
     detail:
-      "Toda la hora hablando tú: el coach ajusta el caso a tu operación, tu viaje o tu edad.",
+      "Online o presenciales: toda la hora hablando tú, con el caso ajustado a tu operación, tu viaje o tu edad.",
     chip: "bg-aqua-100 text-aqua-600",
   },
   {
@@ -27,8 +34,8 @@ const FORMATS = [
     icon: "🗓️",
     title: "Horarios flexibles",
     detail:
-      "Mañana, noche o fines de semana; reprograma sin perder la clase si viajas o entras a turno.",
-    chip: "bg-coral-100 text-coral-600",
+      "Mañana, noche o fines de semana; cambia de online a presencial según tu semana, sin perder la clase.",
+    chip: "bg-brand-100 text-brand-600",
   },
 ];
 
@@ -50,8 +57,8 @@ export default function Modality() {
             className="h-40 w-full rounded-3xl object-cover shadow-lg shadow-slate-200"
           />
           <img
-            src={unsplash(PHOTOS.kidsClass, 600)}
-            alt="Niños en clase interactiva de inglés"
+            src={unsplash(PHOTOS.studyGroup, 600)}
+            alt="Grupo en una clase presencial de inglés en Cali"
             loading="lazy"
             className="h-40 w-full rounded-3xl object-cover shadow-lg shadow-slate-200"
           />
@@ -62,13 +69,14 @@ export default function Modality() {
             Modalidad
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
-            100% online y flexible, desde donde estés
+            Presencial en Cali y online en todo el mundo
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            Estudias desde tu oficina, tu casa o el hotel. Clases en vivo,
-            práctica 1 a 1 y micro-aprendizaje entre sesiones para que el avance
-            no se detenga: sirve igual para un equipo corporativo, un adulto que
-            viaja o un niño de 8 años.
+            Si estás en Cali, vamos a tu empresa o nos vemos en persona; si
+            estás en cualquier otro lugar, la clase es en vivo por videollamada.
+            Sumamos práctica 1 a 1 y micro-aprendizaje entre sesiones para que
+            el avance no se detenga: sirve igual para un equipo corporativo, un
+            adulto que viaja o un niño de 8 años.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -95,7 +103,7 @@ export default function Modality() {
 
           <a
             href={whatsappLink(
-              "Hola, quiero ver los horarios disponibles de las clases online.",
+              "Hola, quiero ver los horarios disponibles (clases online o presenciales en Cali).",
             )}
             target="_blank"
             rel="noopener noreferrer"

@@ -10,11 +10,18 @@ const INTERESTS = [
   "Mis Hijos",
 ];
 
+const MODALITIES = [
+  "Online (en vivo)",
+  "Presencial en Cali",
+  "Me da igual / quiero asesoría",
+];
+
 const INITIAL_FORM = {
   name: "",
   email: "",
   phone: "",
   interest: INTERESTS[0],
+  modality: MODALITIES[0],
 };
 
 const FIELD_CLASS =
@@ -35,6 +42,7 @@ export default function LeadForm() {
       `Email: ${form.email.trim()}`,
       `WhatsApp: ${form.phone.trim()}`,
       `Me interesa para: ${form.interest}`,
+      `Modalidad preferida: ${form.modality}`,
       "",
       "Quiero recibir el plan de clases recomendado.",
     ].join("\n");
@@ -76,14 +84,14 @@ export default function LeadForm() {
 
           <img
             src={unsplash(PHOTOS.studyGroup, 900)}
-            alt="Estudiantes practicando inglés en una sesión online"
+            alt="Estudiantes practicando inglés en una sesión de clase"
             loading="lazy"
             className="mt-8 h-48 w-full rounded-3xl object-cover shadow-lg shadow-slate-200"
           />
 
           <a
             href={whatsappLink(
-              "Hola, quiero información sobre las clases de inglés online.",
+              "Hola, quiero información sobre las clases de inglés (online o presenciales en Cali).",
             )}
             target="_blank"
             rel="noopener noreferrer"
@@ -143,6 +151,21 @@ export default function LeadForm() {
               {INTERESTS.map((interest) => (
                 <option key={interest} value={interest}>
                   {interest}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="mt-5 block text-sm font-semibold text-slate-700">
+            Modalidad preferida
+            <select
+              value={form.modality}
+              onChange={(event) => update("modality", event.target.value)}
+              className={FIELD_CLASS}
+            >
+              {MODALITIES.map((modality) => (
+                <option key={modality} value={modality}>
+                  {modality}
                 </option>
               ))}
             </select>

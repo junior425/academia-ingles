@@ -13,7 +13,7 @@ export default function AudienceTabs() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-600">
-            Programas online
+            Programas online y presenciales
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
             Elige tu programa: empresas, adultos y viajes, o niños
