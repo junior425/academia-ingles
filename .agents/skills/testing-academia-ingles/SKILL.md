@@ -31,11 +31,12 @@ description: How to run and end-to-end test the Fluent Path (academia de inglés
 - Closing DevTools (`F12`) also exits device mode, so keep DevTools docked while doing mobile checks.
 - Confirm there is no horizontal overflow with `document.documentElement.scrollWidth === clientWidth` (expect 390 === 390).
 - Known overlap to watch for: the floating WhatsApp button is `fixed bottom-right`, so at ~390px it can visually overlap whatever sits in the bottom-right of the viewport. In the dark B2B revision it covered the hero CTA; the light revision fixes this with `mr-16 sm:mr-0` on the hero CTA group — re-check this whenever Hero markup changes. The float may still clip the rounded corner of the LevelTest's last answer card; that is cosmetic as long as the option text is clear and a tap on the text advances the question, so always prove clickability rather than judging from the screenshot alone.
+- Hash navigation via `ctrl+l` is unreliable in device mode: typing `localhost:5173/#test` when the current URL has no hash sometimes loads the page at the top and drops the hash. Retype the FULL url including scheme (`http://localhost:5173/#test`) and press Enter, or click the in-page navbar link instead.
 - Navigating with `ctrl+l` to `localhost:5173/` does NOT scroll back to the top when the previous URL had a hash; scroll the emulated viewport up with mouse scroll (`ctrl+Home` does not work either) or navigate to a different anchor first.
 
 ## Console expectations
 - Clean-console baseline: `[vite] connecting.../connected` plus the React DevTools info notice. Anything else is suspect.
-- Expect one benign red error on a cold load: `GET /favicon.ico 404 (Not Found)` — the project ships no favicon. Mention it but do not treat it as an app bug. Blue "N Issues" badges in DevTools are informational, not errors.
+- The old `GET /favicon.ico 404 (Not Found)` error is fixed (`public/favicon.svg` + `<link rel="icon">` in `index.html`). A cold `ctrl+shift+r` should now show ZERO red entries; if the 404 reappears, the favicon asset or the link tag regressed. Blue "N Issues" badges in DevTools are informational, not errors.
 
 ## Devin secrets needed
 - None.
