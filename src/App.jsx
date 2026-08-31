@@ -1,25 +1,33 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Methodology from "./components/Methodology";
+import Differentiators from "./components/Differentiators";
+import MethodologySteps from "./components/MethodologySteps";
+import IndustryCurriculum from "./components/IndustryCurriculum";
+import Comparison from "./components/Comparison";
 import LevelTest from "./components/LevelTest";
-import Contact from "./components/Contact";
+import LeadForm from "./components/LeadForm";
 import WhatsAppFloat from "./components/WhatsAppFloat";
-import { ACADEMY_NAME } from "./config";
+import { ACADEMY_NAME, ACADEMY_TAGLINE } from "./config";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans antialiased">
+    <div className="min-h-screen bg-slate-950 font-sans antialiased">
       <Navbar />
       <main>
         <Hero />
-        <Methodology />
+        <Differentiators />
+        <MethodologySteps />
+        <IndustryCurriculum />
+        <Comparison />
         <LevelTest />
-        <Contact />
+        <LeadForm />
       </main>
-      <footer className="bg-slate-950 py-8">
-        <div className="mx-auto max-w-6xl px-6 text-sm text-slate-400">
-          © {new Date().getFullYear()} {ACADEMY_NAME} · Academia de Inglés
-          Personalizada
+      <footer className="border-t border-white/10 bg-slate-950 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {new Date().getFullYear()} {ACADEMY_NAME} · {ACADEMY_TAGLINE}
+          </span>
+          <span>Inglés corporativo por industria · Programas de 8 meses</span>
         </div>
       </footer>
       <WhatsAppFloat />
