@@ -5,3 +5,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  @apply bg-slate-50 text-slate-800;
+}
+
+img {
+  @apply select-none;
+}

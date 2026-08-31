@@ -1,21 +1,24 @@
 import { useState } from "react";
 import { WHATSAPP_NUMBER, whatsappLink } from "../config";
-import { INDUSTRIES } from "../data/curriculum";
+import { PHOTOS, unsplash } from "../data/images";
 import WhatsAppIcon from "./WhatsAppIcon";
 
-const SECTORS = [...INDUSTRIES.map((industry) => industry.label), "Otro sector"];
-const TEAM_SIZES = ["1-5 personas", "5-20 personas", "20+ personas"];
+const INTERESTS = [
+  "Mi Empresa",
+  "Mi Carrera",
+  "Viajes y Uso Personal",
+  "Mis Hijos",
+];
 
 const INITIAL_FORM = {
   name: "",
-  company: "",
-  sector: SECTORS[0],
-  teamSize: TEAM_SIZES[0],
+  email: "",
   phone: "",
+  interest: INTERESTS[0],
 };
 
 const FIELD_CLASS =
-  "mt-2 w-full rounded-xl border border-white/10 bg-slate-950/70 px-4 py-3 text-base font-normal text-white outline-none transition placeholder:text-slate-500 focus:border-emerald-400";
+  "mt-2 w-full rounded-xl bg-slate-50 px-4 py-3 text-base font-normal text-slate-800 outline-none ring-1 ring-slate-200 transition placeholder:text-slate-400 focus:ring-2 focus:ring-brand-400";
 
 export default function LeadForm() {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -27,14 +30,13 @@ export default function LeadForm() {
 
   function buildMessage() {
     return [
-      "Solicitud de Diagnóstico Operativo Gratis",
+      "Solicitud de diagnóstico / clases de inglés",
       `Nombre: ${form.name.trim()}`,
-      `Empresa: ${form.company.trim()}`,
-      `Sector: ${form.sector}`,
-      `Tamaño del equipo: ${form.teamSize}`,
-      `Teléfono / WhatsApp: ${form.phone.trim()}`,
+      `Email: ${form.email.trim()}`,
+      `WhatsApp: ${form.phone.trim()}`,
+      `Me interesa para: ${form.interest}`,
       "",
-      "Quiero recibir el plan de estudios a la medida de mi empresa.",
+      "Quiero recibir el plan de clases recomendado.",
     ].join("\n");
   }
 
@@ -45,120 +47,82 @@ export default function LeadForm() {
   }
 
   return (
-    <section
-      id="contacto"
-      className="border-t border-white/5 bg-slate-950 py-20 md:py-28"
-    >
+    <section id="contacto" className="bg-white py-16 md:py-24">
       <div className="mx-auto grid max-w-6xl items-start gap-12 px-6 lg:grid-cols-[1fr_1fr]">
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-400">
-            Diagnóstico operativo
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-mango-600">
+            Diagnóstico gratis
           </span>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Solicite el diagnóstico gratuito para su equipo
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Agenda tu diagnóstico y recibe tu plan de clases
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-slate-300">
-            Diseñamos un plan de estudios a la medida del objeto social de su
-            empresa en menos de 24 horas.
+          <p className="mt-5 text-lg leading-relaxed text-slate-600">
+            Diseñamos tu plan de estudio a la medida —de tu empresa, tu carrera,
+            tu viaje o tus hijos— en menos de 24 horas.
           </p>
 
-          <ul className="mt-8 space-y-4 text-slate-300">
+          <ul className="mt-8 space-y-4 text-slate-600">
             {[
-              "Sesión de diagnóstico con un coach especializado en su industria.",
-              "Mapa de los escenarios críticos donde su equipo pierde negocio por el idioma.",
-              "Propuesta de roadmap de 8 meses con hitos medibles al mes 4 y al mes 8.",
+              "Sesión de diagnóstico gratuita con un coach del programa que te corresponde.",
+              "Mapa de las situaciones donde hoy te bloqueas al hablar inglés.",
+              "Propuesta de plan con hitos claros al mes 4 y al mes 8.",
             ].map((item) => (
               <li key={item} className="flex gap-3">
-                <span className="mt-1 text-emerald-400">✓</span>
+                <span className="mt-0.5 font-bold text-aqua-600">✓</span>
                 <span className="leading-relaxed">{item}</span>
               </li>
             ))}
           </ul>
 
+          <img
+            src={unsplash(PHOTOS.studyGroup, 900)}
+            alt="Estudiantes practicando inglés en una sesión online"
+            loading="lazy"
+            className="mt-8 h-48 w-full rounded-3xl object-cover shadow-lg shadow-slate-200"
+          />
+
           <a
             href={whatsappLink(
-              "Hola, quiero información sobre los programas de inglés corporativo por industria.",
+              "Hola, quiero información sobre las clases de inglés online.",
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-9 inline-flex items-center gap-3 text-lg font-semibold text-emerald-400 transition hover:text-emerald-300"
+            className="mt-8 inline-flex items-center gap-3 text-lg font-bold text-brand-700 transition hover:text-brand-600"
           >
-            <WhatsAppIcon className="h-6 w-6" />
-            +{WHATSAPP_NUMBER}
+            <WhatsAppIcon className="h-6 w-6" />+{WHATSAPP_NUMBER}
           </a>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur md:p-10"
+          className="rounded-[2rem] bg-slate-50 p-8 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200 md:p-10"
         >
-          <label className="block text-sm font-semibold text-slate-200">
+          <label className="block text-sm font-semibold text-slate-700">
             Nombre completo
             <input
               type="text"
               required
               value={form.name}
               onChange={(event) => update("name", event.target.value)}
-              placeholder="Ej: Daiana Restrepo"
+              placeholder="Ej: Vicente Hernández"
               className={FIELD_CLASS}
             />
           </label>
 
-          <label className="mt-5 block text-sm font-semibold text-slate-200">
-            Nombre de la empresa
+          <label className="mt-5 block text-sm font-semibold text-slate-700">
+            Email
             <input
-              type="text"
+              type="email"
               required
-              value={form.company}
-              onChange={(event) => update("company", event.target.value)}
-              placeholder="Ej: Global Freight S.A.S."
+              value={form.email}
+              onChange={(event) => update("email", event.target.value)}
+              placeholder="Ej: nombre@correo.com"
               className={FIELD_CLASS}
             />
           </label>
 
-          <label className="mt-5 block text-sm font-semibold text-slate-200">
-            Sector de la industria
-            <select
-              value={form.sector}
-              onChange={(event) => update("sector", event.target.value)}
-              className={FIELD_CLASS}
-            >
-              {SECTORS.map((sector) => (
-                <option key={sector} value={sector}>
-                  {sector}
-                </option>
-              ))}
-            </select>
-          </label>
-
-          <fieldset className="mt-5">
-            <legend className="text-sm font-semibold text-slate-200">
-              Tamaño del equipo a capacitar
-            </legend>
-            <div className="mt-3 grid grid-cols-3 gap-2">
-              {TEAM_SIZES.map((size) => {
-                const isActive = form.teamSize === size;
-                return (
-                  <button
-                    key={size}
-                    type="button"
-                    aria-pressed={isActive}
-                    onClick={() => update("teamSize", size)}
-                    className={`rounded-xl border px-3 py-3 text-sm font-semibold transition ${
-                      isActive
-                        ? "border-emerald-400 bg-emerald-500/15 text-white"
-                        : "border-white/10 text-slate-400 hover:border-white/30 hover:text-white"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                );
-              })}
-            </div>
-          </fieldset>
-
-          <label className="mt-5 block text-sm font-semibold text-slate-200">
-            Teléfono / WhatsApp
+          <label className="mt-5 block text-sm font-semibold text-slate-700">
+            WhatsApp
             <input
               type="tel"
               required
@@ -169,25 +133,39 @@ export default function LeadForm() {
             />
           </label>
 
+          <label className="mt-5 block text-sm font-semibold text-slate-700">
+            Me interesa para
+            <select
+              value={form.interest}
+              onChange={(event) => update("interest", event.target.value)}
+              className={FIELD_CLASS}
+            >
+              {INTERESTS.map((interest) => (
+                <option key={interest} value={interest}>
+                  {interest}
+                </option>
+              ))}
+            </select>
+          </label>
+
           <button
             type="submit"
-            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-emerald-500 px-6 py-4 text-base font-bold text-slate-950 transition hover:bg-emerald-400"
+            className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-mango-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-mango-500/30 transition hover:bg-mango-600"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            Solicitar Diagnóstico Operativo Gratis
+            Agendar mi diagnóstico gratis
           </button>
 
           <p className="mt-4 text-center text-xs leading-relaxed text-slate-500">
-            Diseñamos un plan de estudios a la medida del objeto social de su
-            empresa en menos de 24 horas.
+            Te enviamos el plan recomendado por WhatsApp en menos de 24 horas.
           </p>
 
           {sent && (
             <p
               role="status"
-              className="mt-5 rounded-xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200"
+              className="mt-5 rounded-xl bg-aqua-50 px-4 py-3 text-sm text-aqua-600 ring-1 ring-aqua-100"
             >
-              Abrimos WhatsApp con su solicitud. Si no se abrió, escríbanos al +
+              Abrimos WhatsApp con tu solicitud. Si no se abrió, escríbenos al +
               {WHATSAPP_NUMBER}.
             </p>
           )}

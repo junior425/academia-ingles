@@ -1,66 +1,79 @@
+import { PHOTOS, unsplash } from "../data/images";
+
 const CARDS = [
   {
-    tag: "ESP",
-    title: "100% adaptado a su industria",
+    tag: "Para tu trabajo",
+    icon: "💼",
+    title: "Inglés de tu industria, desde el día uno",
     description:
-      "El programa se escribe sobre el objeto social de la empresa: 70% resolución de crisis específicas del negocio y 30% transferencia a la vida general del colaborador.",
-    bullets: [
-      "Casos reales de su operación",
-      "Vocabulario que sí se usa",
-      "70/30 negocio / vida general",
-    ],
+      "Logística, medicina, ingeniería o gerencia: el programa se escribe sobre tu operación real, con 70% de casos de tu sector y 30% de vida general.",
+    photo: PHOTOS.meeting,
+    accent: "from-brand-500 to-brand-700",
   },
   {
-    tag: "Lexical Chunking",
-    title: "Bloques léxicos, no reglas sueltas",
+    tag: "Para tus viajes",
+    icon: "✈️",
+    title: "Habla en el aeropuerto, no en el examen",
     description:
-      "Audio nativo con IA, identificación de chunks, hack mental L1, mutación de bloques y roleplay de crisis. Cinco pasos que instalan el inglés como reflejo, no como teoría.",
-    bullets: [
-      "Audio nativo generado con IA",
-      "Hacks mentales sobre la lógica del español",
-      "Roleplays de alta presión",
-    ],
+      "Bloques listos para migración, hoteles, restaurantes y conversaciones reales. Perfecto si viajas pronto o te vas a vivir al exterior.",
+    photo: PHOTOS.airport,
+    accent: "from-aqua-400 to-aqua-600",
   },
   {
-    tag: "ROI",
-    title: "Retorno medible en 8 meses",
+    tag: "Para tu familia",
+    icon: "🎨",
+    title: "Niños que aprenden jugando",
     description:
-      "Al mes 4 el equipo sostiene la comunicación funcional del negocio. Al mes 8 negocia, resuelve disputas y representa a la compañía en escenarios internacionales.",
-    bullets: [
-      "Mes 4: comunicación funcional",
-      "Mes 8: negociación y representación",
-      "Reporte ejecutivo de avance",
-    ],
+      "Videos cortos, cuentos animados y roleplay lúdico. Los chunks entran con ritmo y repetición, sin tareas aburridas ni listas de vocabulario.",
+    photo: PHOTOS.kidsPlay,
+    accent: "from-mango-400 to-coral-500",
   },
 ];
 
 export default function Differentiators() {
   return (
-    <section className="border-t border-white/5 bg-slate-950 py-20 md:py-24">
+    <section className="bg-slate-50 py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-mango-600">
+            Zero-Waste Learning
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            Un método, tres vidas donde usarlo
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-slate-600">
+            No aprendes inglés “en general”: aprendes exactamente el inglés que
+            vas a usar esta semana en tu trabajo, tu viaje o la clase de tus
+            hijos.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {CARDS.map((card) => (
             <article
               key={card.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition hover:border-emerald-400/40 hover:bg-white/[0.05]"
+              className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-slate-200/70 ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <span className="inline-flex rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-sky-300">
-                {card.tag}
-              </span>
-              <h3 className="mt-5 text-xl font-extrabold text-white">
-                {card.title}
-              </h3>
-              <p className="mt-3 leading-relaxed text-slate-400">
-                {card.description}
-              </p>
-              <ul className="mt-6 space-y-2 border-t border-white/10 pt-5 text-sm text-slate-300">
-                {card.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-center gap-2">
-                    <span className="text-emerald-400">✓</span>
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+              <img
+                src={unsplash(card.photo, 700)}
+                alt={card.title}
+                loading="lazy"
+                className="h-44 w-full object-cover"
+              />
+              <div className="p-7">
+                <span
+                  className={`inline-flex items-center gap-2 rounded-full bg-gradient-to-r ${card.accent} px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white`}
+                >
+                  <span aria-hidden="true">{card.icon}</span>
+                  {card.tag}
+                </span>
+                <h3 className="mt-4 text-xl font-extrabold text-brand-900">
+                  {card.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-slate-600">
+                  {card.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
