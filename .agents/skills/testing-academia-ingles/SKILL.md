@@ -22,14 +22,20 @@ description: How to run and end-to-end test the Fluent Path (academia de inglés
 ## Verifying wa.me deep links without a WhatsApp account
 - Hovering a link shows the (truncated) href in Chrome's status bar — good for a quick check, but not enough to read a long message.
 - Best evidence: click the link. `wa.me` redirects to `api.whatsapp.com/send/?phone=...&text=...` and renders the **decoded message text on screen**, which is ideal screenshot proof. A Chrome "Open xdg-open?" dialog appears — click **Cancel** and the page stays usable.
-- Links use `target="_blank"`; close the tab with ctrl+w afterwards, or use alt+Left if it navigated in place.
+- Links use `target="_blank"`, but the LevelTest results link can end up navigating the SAME tab. Check the tab strip before pressing `ctrl+w`: if it is the only tab, `ctrl+w` quits Chrome entirely and you lose device-mode state and the CDP connection. Prefer `alt+Left` to go back, and only use `ctrl+w` when a second tab is clearly open.
+- If Chrome has to be relaunched by hand (`google-chrome <url> &`), the `browser_console` tool loses CDP access ("Could not connect to Chrome via CDP"). Fall back to typing JS into the DevTools Console panel and reading the result from a zoomed screenshot.
 
 ## Responsive checks (390px)
 - `wmctrl` resizing is unreliable here: Chrome refuses to shrink its outer window below ~532px wide, so you cannot reach a 390px viewport that way.
 - Reliable recipe: maximize the window (`wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz`), press `F12` to open DevTools, then click the **device-toolbar icon** in the DevTools toolbar (top-left of the DevTools pane, next to the inspect arrow). `ctrl+shift+m` is flaky — if the page has focus instead of DevTools it can open Chrome's profile menu, and it silently toggles device mode off again. Then type the width/height into the "Dimensions: Responsive" boxes (390 x 844) and press Enter.
 - Closing DevTools (`F12`) also exits device mode, so keep DevTools docked while doing mobile checks.
 - Confirm there is no horizontal overflow with `document.documentElement.scrollWidth === clientWidth` (expect 390 === 390).
-- Known overlap to watch for: the floating "Escríbenos" WhatsApp button is `fixed bottom-right`, so at ~390px it can visually overlap whatever sits in the bottom-right of the viewport. Observed on the hero CTA "Solicitar Diagnóstico Operativo Gratis" (still clickable on its left portion). The LevelTest options add `pr-16` on mobile, which keeps option text clear and clickable.
+- Known overlap to watch for: the floating WhatsApp button is `fixed bottom-right`, so at ~390px it can visually overlap whatever sits in the bottom-right of the viewport. In the dark B2B revision it covered the hero CTA; the light revision fixes this with `mr-16 sm:mr-0` on the hero CTA group — re-check this whenever Hero markup changes. The float may still clip the rounded corner of the LevelTest's last answer card; that is cosmetic as long as the option text is clear and a tap on the text advances the question, so always prove clickability rather than judging from the screenshot alone.
+- Navigating with `ctrl+l` to `localhost:5173/` does NOT scroll back to the top when the previous URL had a hash; scroll the emulated viewport up with mouse scroll (`ctrl+Home` does not work either) or navigate to a different anchor first.
+
+## Console expectations
+- Clean-console baseline: `[vite] connecting.../connected` plus the React DevTools info notice. Anything else is suspect.
+- Expect one benign red error on a cold load: `GET /favicon.ico 404 (Not Found)` — the project ships no favicon. Mention it but do not treat it as an app bug. Blue "N Issues" badges in DevTools are informational, not errors.
 
 ## Devin secrets needed
 - None.
