@@ -1,22 +1,22 @@
 import { ACADEMY_NAME, ACADEMY_TAGLINE } from "../config";
 
 const LINKS = [
+  ["Programas", "#programas"],
   ["Metodología", "#metodologia"],
-  ["Currículo", "#curriculo"],
-  ["Comparativa", "#comparativa"],
+  ["Modalidad", "#modalidad"],
   ["Test de nivel", "#test"],
 ];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/85 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#inicio" className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-sky-500 text-sm font-extrabold text-slate-950">
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 via-aqua-400 to-mango-400 text-sm font-extrabold text-white shadow-md shadow-brand-500/30">
             FP
           </span>
           <span className="leading-tight">
-            <span className="block text-base font-bold tracking-tight text-white">
+            <span className="block text-base font-extrabold tracking-tight text-brand-900">
               {ACADEMY_NAME}
             </span>
             <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
@@ -25,9 +25,9 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
+        <div className="hidden items-center gap-7 text-sm font-semibold text-slate-600 lg:flex">
           {LINKS.map(([label, href]) => (
-            <a key={href} className="transition hover:text-white" href={href}>
+            <a key={href} className="transition hover:text-brand-600" href={href}>
               {label}
             </a>
           ))}
@@ -35,9 +35,9 @@ export default function Navbar() {
 
         <a
           href="#contacto"
-          className="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-emerald-400"
+          className="rounded-full bg-mango-500 px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-mango-500/30 transition hover:bg-mango-600"
         >
-          Diagnóstico gratis
+          Agendar clases
         </a>
       </nav>
     </header>

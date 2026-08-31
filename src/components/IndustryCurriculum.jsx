@@ -7,21 +7,19 @@ export default function IndustryCurriculum() {
   const industry = INDUSTRIES.find((item) => item.id === activeId);
 
   return (
-    <section
-      id="curriculo"
-      className="border-t border-white/5 bg-slate-950 py-20 md:py-28"
-    >
+    <section id="curriculo" className="bg-slate-50 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-[0.18em] text-sky-400">
-            Currículo por industria
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-coral-500">
+            Currículo por industria (B2B)
           </span>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Vea el roadmap de 8 meses de su sector
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
+            El roadmap de 8 meses de tu sector
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-slate-400">
-            Cada programa se construye sobre el objeto social de la empresa.
-            Estos son extractos reales de los planes que entregamos.
+          <p className="mt-4 text-lg leading-relaxed text-slate-600">
+            Para empresas y profesionales, cada programa se construye sobre el
+            objeto social de la compañía. Estos son extractos reales de los
+            planes que entregamos.
           </p>
         </div>
 
@@ -39,10 +37,10 @@ export default function IndustryCurriculum() {
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveId(item.id)}
-                className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
+                className={`rounded-full px-5 py-2.5 text-sm font-bold transition ${
                   isActive
-                    ? "border-sky-400 bg-sky-400 text-slate-950"
-                    : "border-white/15 text-slate-300 hover:border-white/40 hover:text-white"
+                    ? "bg-brand-600 text-white shadow-lg shadow-brand-600/25"
+                    : "bg-white text-slate-600 ring-1 ring-slate-200 hover:ring-brand-200"
                 }`}
               >
                 {item.label}
@@ -51,13 +49,13 @@ export default function IndustryCurriculum() {
           })}
         </div>
 
-        <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
-          <div className="flex flex-col gap-3 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
+        <div className="mt-8 rounded-[2rem] bg-white p-8 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200 md:p-10">
+          <div className="flex flex-col gap-4 border-b border-slate-200 pb-8 md:flex-row md:items-end md:justify-between">
             <div>
-              <h3 className="text-2xl font-extrabold text-white sm:text-3xl">
+              <h3 className="text-2xl font-extrabold text-brand-900 sm:text-3xl">
                 {industry.headline}
               </h3>
-              <p className="mt-2 text-slate-400">Para: {industry.audience}</p>
+              <p className="mt-2 text-slate-500">Para: {industry.audience}</p>
             </div>
             <a
               href={whatsappLink(
@@ -65,7 +63,7 @@ export default function IndustryCurriculum() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 rounded-full bg-emerald-500 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-emerald-400"
+              className="shrink-0 rounded-full bg-mango-500 px-6 py-3 text-sm font-bold text-white shadow-md shadow-mango-500/30 transition hover:bg-mango-600"
             >
               Pedir roadmap completo
             </a>
@@ -75,24 +73,24 @@ export default function IndustryCurriculum() {
             {industry.phases.map((phase, index) => (
               <div
                 key={phase.range}
-                className="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-6"
+                className="flex flex-col rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-extrabold text-emerald-300">
+                  <span className="text-sm font-extrabold text-brand-700">
                     {phase.range}
                   </span>
-                  <span className="grid h-7 w-7 place-items-center rounded-full bg-white/10 text-xs font-bold text-slate-300">
+                  <span className="grid h-7 w-7 place-items-center rounded-full bg-brand-100 text-xs font-bold text-brand-700">
                     {index + 1}
                   </span>
                 </div>
-                <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
+                <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-slate-400">
                   {phase.level}
                 </p>
-                <p className="mt-3 font-bold text-white">{phase.focus}</p>
-                <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 font-bold text-brand-900">{phase.focus}</p>
+                <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-slate-600">
                   {phase.topics.map((topic) => (
                     <li key={topic} className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua-500" />
                       {topic}
                     </li>
                   ))}
