@@ -9,9 +9,9 @@ export default function FinalCta() {
             Comprueba la diferencia cara a cara antes de decidir
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-pearl">
-            En 35 minutos diagnosticamos tu nivel real de fluidez, pruebas
-            nuestro software de retos interactivos en vivo y trazamos tu plan
-            personalizado presencial o virtual.
+            En 35 minutos diagnosticamos tu nivel real de fluidez, experimentas
+            en vivo nuestro método de entrenamiento conversacional y trazamos tu
+            plan personalizado presencial o virtual.
           </p>
           <div className="mt-10 flex justify-center">
             <CtaButton variant="whatsapp">

@@ -49,9 +49,9 @@ export const SESSION_STEPS = [
     number: "04",
     range: "Minutos 41–85",
     minutes: 45,
-    title: "Gimnasio de Mutación y Juego",
+    title: "Gimnasio de Mutación y Agilidad",
     description:
-      "Practicas cambiando estructuras a velocidad en pantalla y compites en nuestra plataforma de retos interactivos para ganar agilidad mental.",
+      "Practicas transformando estructuras en vivo a velocidad y apoyamos la sesión con retos dinámicos e interactivos para entrenar tus reflejos mentales sin traducir.",
   },
   {
     number: "05",

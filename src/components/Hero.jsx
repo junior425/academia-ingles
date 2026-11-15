@@ -17,11 +17,11 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-pearl lg:mx-0">
-            Diseñado para profesionales y adultos en Cali que no quieren más
-            pantallas ni teorías interminables. Un entrenador se desplaza a tu
-            hogar u oficina para entrenar contigo 120 minutos, utilizando un
-            método activo y nuestro software interactivo para que pienses en
-            inglés desde la primera sesión.
+            Diseñado para profesionales y adultos en Cali que buscan resultados
+            reales, sin relleno teórico ni pantallas interminables. Un
+            entrenador se desplaza a tu hogar u oficina para entrenar contigo
+            cara a cara durante 120 minutos con un método 100% conversacional y
+            práctico.
           </p>
           <div className="mt-10 flex justify-center lg:justify-start">
             <CtaButton>Agendar mi Clase Demo de Diagnóstico (35 min)</CtaButton>
@@ -43,15 +43,15 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent" />
           </div>
           <div className="absolute -bottom-6 left-4 flex items-center gap-3 rounded-2xl border border-line bg-card/95 px-5 py-4 shadow-xl backdrop-blur sm:left-8">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold text-lg font-extrabold text-ink">
-              ▶
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gold text-sm font-extrabold text-ink">
+              1:1
             </span>
             <div>
               <p className="text-sm font-extrabold text-white">
-                Plataforma Interactiva
+                Entrenamiento Presencial 1-a-1
               </p>
               <p className="text-sm font-bold text-emerald">
-                + 85% Práctica Activa
+                85% Práctica Hablada
               </p>
             </div>
           </div>
