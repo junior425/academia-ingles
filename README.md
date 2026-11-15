@@ -1,8 +1,8 @@
 # Natural Flow English — Landing Page
 
 Landing corta y ejecutiva en React + Vite + Tailwind CSS para una academia de
-inglés práctico (Cali y virtual) dirigida a profesionales y adultos. Su único
-objetivo es que el visitante agende su Clase Demo Virtual Gratuita de 35 minutos
+inglés práctico (presencial uno a uno en Cali, con opción virtual) dirigida a profesionales y adultos. Su único
+objetivo es que el visitante agende su Clase Demo de Diagnóstico de 35 minutos
 por WhatsApp. No muestra precios.
 
 Producción: https://academia-ingles-green.vercel.app
