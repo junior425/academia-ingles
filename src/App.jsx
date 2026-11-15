@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Differentiators from "./components/Differentiators";
 import AudienceTabs from "./components/AudienceTabs";
+import PragmaticChunking from "./components/PragmaticChunking";
 import MethodologySteps from "./components/MethodologySteps";
 import Modality from "./components/Modality";
 import IndustryCurriculum from "./components/IndustryCurriculum";
@@ -17,6 +18,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <PragmaticChunking />
         <Differentiators />
         <AudienceTabs />
         <MethodologySteps />

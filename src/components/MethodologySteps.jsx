@@ -10,11 +10,11 @@ export default function MethodologySteps() {
   const progress = ((activeId - 1) / (STEPS.length - 1)) * 100;
 
   return (
-    <section id="metodologia" className="bg-slate-50 py-16 md:py-24">
+    <section id="sistema" className="bg-slate-50 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-aqua-600">
-            Metodología
+            Cómo es cada clase
           </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-brand-900 sm:text-4xl">
             El sistema de 5 pasos de bloques léxicos

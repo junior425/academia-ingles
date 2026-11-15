@@ -17,7 +17,7 @@ description: How to run and end-to-end test the Fluent Path (academia de inglés
 - `src/components/LevelTest.jsx`: one question at a time, progress `answers.length/QUESTIONS.length`, result panel with ✓/✕ per question and the WhatsApp results link.
 - `src/components/Hero.jsx`, `LeadForm.jsx` (B2B redesign) / `Contact.jsx` (older version), `WhatsAppFloat.jsx`: other wa.me entry points.
 - Light redesign adds `#programas` (AudienceTabs: 3 audience tabs w/ `role="tab"`+`aria-selected`, 4 photo cards each) and `#modalidad` (Modality). Photos come from `src/data/images.js` via Unsplash URLs, so they need network access.
-- Sections and anchors: `#metodologia` (MethodologySteps, 5-step stepper, progress `(activeId-1)/4*100`), `#curriculo` (IndustryCurriculum tabs w/ `role="tab"`+`aria-selected`, 4 phases each), `#comparativa` (Comparison: `hidden md:table` desktop table vs `md:hidden` mobile cards), `#test` (LevelTest), `#contacto` (LeadForm).
+- Sections and anchors: `#metodologia` (PragmaticChunking, right after Hero: 3 step cards, 4 example tabs w/ `role="tab"` + `aria-pressed` toggle libro/fluent, demo CTA wa.me link in `src/data/pragmatic.js`), `#sistema` (MethodologySteps, 5-step stepper, progress `(activeId-1)/4*100`), `#curriculo` (IndustryCurriculum tabs w/ `role="tab"`+`aria-selected`, 4 phases each), `#comparativa` (Comparison: `hidden md:table` desktop table vs `md:hidden` mobile cards), `#test` (LevelTest), `#contacto` (LeadForm).
 
 ## Verifying wa.me deep links without a WhatsApp account
 - Hovering a link shows the (truncated) href in Chrome's status bar — good for a quick check, but not enough to read a long message.
