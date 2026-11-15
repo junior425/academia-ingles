@@ -3,7 +3,7 @@ export const COMPARISON = [
     obsolete:
       "Años memorizando reglas gramaticales y llenando libros que no sirven al hablar.",
     natural:
-      "Cero relleno teórico. Atajos mentales claros en español para entender cómo piensan los nativos en 8 minutos.",
+      "Cero relleno teórico. Atajos mentales claros en español para entender cómo piensan los nativos en 10 minutos.",
   },
   {
     obsolete: "Diálogos lentos, robóticos y desconectados de la realidad.",
@@ -17,39 +17,61 @@ export const COMPARISON = [
   },
 ];
 
-export const SESSION_MINUTES = 68;
+export const SESSION_MINUTES = 120;
 
-export const SESSION_BLOCKS = [
+export const SESSION_STEPS = [
   {
     number: "01",
-    range: "Minutos 1–8",
-    minutes: 8,
-    title: "El Atajo Mental (Español Estratégico)",
+    minutes: 5,
+    title: "El Problema Real",
     description:
-      "Conectamos con una situación real de oficina, viaje o vida cotidiana y te entregamos el truco mental exacto sin enredos gramaticales.",
+      "Conectamos directamente con una situación real de oficina, viaje o vida diaria, sin mencionar reglas gramaticales.",
   },
   {
     number: "02",
-    range: "Minutos 9–23",
-    minutes: 15,
-    title: "Oído Real y Frases Vivas",
+    minutes: 10,
+    title: "El Atajo Mental",
     description:
-      "Entrenas tu oído con audios hiperrealistas y dominas las 3 expresiones clave (chunks) que realmente usan los nativos hoy.",
+      'Te entregamos la equivalencia conceptual corta en español estratégico ("el truco exacto") para que entiendas cómo piensan los nativos.',
   },
   {
     number: "03",
-    range: "Minutos 24–48",
     minutes: 25,
-    title: "Gimnasio de Agilidad Interactivo",
+    title: "Inmersión y Frases Vivas",
     description:
-      "Entras a nuestra plataforma digital de juegos y retos en pantalla para combinar frases a velocidad hasta pensar en inglés sin traducir.",
+      'Entrenas el oído con audios hiperrealistas y videos reales, dominando los 3 "chunks" (frases vivas) esenciales de la lección.',
   },
   {
     number: "04",
-    range: "Minutos 49–68",
-    minutes: 20,
-    title: "Simulacro de Vida Real (Roleplay)",
+    minutes: 45,
+    title: "Gimnasio de Mutación y Juego",
     description:
-      "Cierras la sesión resolviendo un reto real de negocios, viajes o conversación contra reloj hasta hablar con seguridad.",
+      "Practicas cambiando estructuras a velocidad y entras a nuestra plataforma interactiva en pantalla para competir y ganar agilidad mental.",
+  },
+  {
+    number: "05",
+    minutes: 35,
+    title: "El Reto Real (Roleplay)",
+    description:
+      "Cierras la sesión enfrentando un simulacro de la vida real bajo presión de tiempo hasta hablar con total seguridad.",
+  },
+];
+
+export const ROUTE_FACTS = [
+  {
+    label: "Estructura",
+    value: "4 Bloques Prácticos",
+    detail: "de 60 horas cada uno.",
+  },
+  {
+    label: "Duración estimada",
+    value: "Entre 6 y 8 meses",
+    detail:
+      "en total, avanzando a tu ritmo de 2, 4 o 6 horas semanales, en sesiones de 90 a 120 minutos.",
+  },
+  {
+    label: "Modalidad",
+    value: "100% Virtual en vivo",
+    detail: "o Presencial VIP (Cali).",
   },
 ];

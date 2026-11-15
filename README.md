@@ -9,15 +9,17 @@ Producción: https://academia-ingles-green.vercel.app
 
 ## Secciones
 
-1. **Hero**: badge, H1, subtítulo y CTA dorado a WhatsApp.
+1. **Hero**: 2 columnas en desktop (texto + foto con tarjeta flotante) y CTA dorado a WhatsApp.
 2. **Diferencia**: comparación en 2 columnas, Metodología Obsoleta vs. Natural Flow English.
-3. **Método de 68 minutos**: 4 bloques con sus tiempos exactos y una barra proporcional.
-4. **Cierre**: caja con borde dorado y botón verde de WhatsApp, footer y botón flotante.
+3. **Sesión de 120 minutos**: 5 pasos (5 + 10 + 25 + 45 + 35 min) con barra proporcional.
+4. **Ruta de 4 bloques**: estructura, duración y modalidad, con foto lateral.
+5. **Cierre**: caja con borde dorado y botón verde de WhatsApp, footer y botón flotante.
 
 ## Contenido
 
 - `src/config.js`: nombre de la marca y `DEMO_WHATSAPP_URL` (único enlace de WhatsApp).
-- `src/data/content.js`: filas de la comparación y bloques de la sesión.
+- `src/data/content.js`: filas de la comparación, pasos de la sesión y datos de la ruta.
+- `src/data/images.js`: foto del hero (`public/hero-natural-flow.jpg`) y foto de Unsplash de la ruta.
 - `tailwind.config.js`: paleta (`ink`, `card`, `line`, `pearl`, `gold`, `emerald`).
 
 ## Desarrollo

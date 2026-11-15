@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Difference from "./components/Difference";
 import SessionMethod from "./components/SessionMethod";
+import Route from "./components/Route";
 import FinalCta from "./components/FinalCta";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import { ACADEMY_NAME } from "./config";
@@ -14,6 +15,7 @@ export default function App() {
         <Hero />
         <Difference />
         <SessionMethod />
+          <Route />
         <FinalCta />
       </main>
       <footer className="border-t border-line py-8 pb-24 sm:pb-8">

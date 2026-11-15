@@ -11,7 +11,7 @@ description: How to run and end-to-end test the Natural Flow English (academia d
 - No login, no API keys, no backend. Everything is static client-side React.
 
 ## Structure
-- 4 sections only: `#inicio` (Hero), `#diferencia` (Difference), `#metodo` (SessionMethod, 4 blocks 8+15+25+20 = 68 min), `#demo` (FinalCta), plus footer and `WhatsAppFloat`.
+- Sections: `#inicio` (Hero, 2 columns with local photo `public/hero-natural-flow.jpg`), `#diferencia` (Difference), `#metodo` (SessionMethod, 5 steps 5+10+25+45+35 = 120 min), `#ruta` (Route, 4 blocks + Unsplash photo), `#demo` (FinalCta), plus footer and `WhatsAppFloat`.
 - Every WhatsApp link (navbar, hero CTA, final CTA, float) uses `DEMO_WHATSAPP_URL` from `src/config.js`.
 - Copy lives in `src/data/content.js`; palette lives in `tailwind.config.js`.
 
