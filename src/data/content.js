@@ -65,9 +65,9 @@ export const ROUTE_FACTS = [
   },
   {
     label: "Duración estimada",
-    value: "Entre 6 y 8 meses",
+    value: "Según tu ritmo semanal",
     detail:
-      "en total, avanzando a tu ritmo de 2, 4 o 6 horas semanales, en sesiones de 90 a 120 minutos.",
+      "avanzando 2, 4 o 6 horas por semana, en sesiones de 90 a 120 minutos.",
   },
   {
     label: "Modalidad",
