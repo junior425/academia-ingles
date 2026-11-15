@@ -14,15 +14,15 @@ export default function SessionMethod() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Así funciona cada sesión inmersiva de {SESSION_MINUTES} minutos
+            Así funciona cada sesión práctica de {SESSION_MINUTES} minutos
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pearl">
-            Un entrenamiento de alto impacto diseñado para adultos y
-            profesionales que quieren dejar atrás las metodologías obsoletas y
-            hablar con fluidez.
+            Un entrenamiento paso a paso creado para adultos y profesionales que
+            valoran su tiempo y quieren soltar la lengua de forma interactiva y
+            natural.
           </p>
           <p className="mt-4 text-sm font-semibold text-gold">
-            5 pasos • {SESSION_MINUTES} minutos • Opción flexible de 90 min
+            5 pasos • {SESSION_MINUTES} minutos • Presencial en Cali
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function SessionMethod() {
                   {step.number}
                 </span>
                 <span className="rounded-full border border-line bg-ink px-3 py-1 text-xs font-bold text-pearl">
-                  {step.minutes} min
+                  {step.range}
                 </span>
               </div>
               <h3 className="mt-5 text-xl font-extrabold text-white">

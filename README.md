@@ -9,17 +9,17 @@ Producción: https://academia-ingles-green.vercel.app
 
 ## Secciones
 
-1. **Hero**: 2 columnas en desktop (texto + foto con tarjeta flotante) y CTA dorado a WhatsApp.
+1. **Hero**: entrenamiento presencial uno a uno en Cali; foto a la derecha en desktop y arriba en móvil, CTA dorado.
 2. **Diferencia**: comparación en 2 columnas, Metodología Obsoleta vs. Natural Flow English.
-3. **Sesión de 120 minutos**: 5 pasos (5 + 10 + 25 + 45 + 35 min) con barra proporcional.
-4. **Ruta de 4 bloques**: estructura, duración y modalidad, con foto lateral.
-5. **Cierre**: caja con borde dorado y botón verde de WhatsApp, footer y botón flotante.
+3. **Sesión de 120 minutos**: 5 pasos (minutos 1–5, 6–15, 16–40, 41–85, 86–120) con barra proporcional.
+4. **Ruta de 4 bloques**: 240 h, avance según el ritmo semanal y modalidad VIP presencial (virtual opcional).
+5. **Cierre**: caja con borde dorado, botón verde de WhatsApp y firma de Vicente Hernández, footer y botón flotante.
 
 ## Contenido
 
 - `src/config.js`: nombre de la marca y `DEMO_WHATSAPP_URL` (único enlace de WhatsApp).
 - `src/data/content.js`: filas de la comparación, pasos de la sesión y datos de la ruta.
-- `src/data/images.js`: foto del hero (`public/hero-natural-flow.jpg`) y foto de Unsplash de la ruta.
+- `src/data/images.js`: fotos locales del hero (`public/hero-presencial.jpg`) y de la ruta (`public/ruta-presencial.jpg`).
 - `tailwind.config.js`: paleta (`ink`, `card`, `line`, `pearl`, `gold`, `emerald`).
 
 ## Desarrollo

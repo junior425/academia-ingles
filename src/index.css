@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply bg-ink text-white;
+  @apply overflow-x-hidden bg-ink text-white;
 }

@@ -4,14 +4,15 @@ import { COMPARISON } from "../data/content";
 export default function Difference() {
   return (
     <section id="diferencia" className="border-t border-line py-20 sm:py-24">
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             ¿Por qué sigues sin hablar inglés después de haber estudiado antes?
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-pearl">
-            Porque las academias tradicionales siguen usando metodologías
-            obsoletas del siglo pasado. Nosotros cambiamos las reglas del juego:
+            Porque las academias tradicionales y los cursos virtuales masivos
+            usan metodologías obsoletas. Nosotros cambiamos las reglas del
+            juego:
           </p>
         </div>
 

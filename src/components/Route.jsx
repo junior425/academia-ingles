@@ -29,11 +29,11 @@ export default function Route() {
             ))}
           </ul>
         </div>
-        <div className="relative overflow-hidden rounded-[2rem] border border-line shadow-2xl shadow-black/40">
+        <div className="relative overflow-hidden rounded-[2rem] lg:order-first border border-line shadow-2xl shadow-black/40">
           <img
             src={ROUTE_IMAGE}
-            alt="Adultos practicando una conversación en inglés en un café moderno"
-            className="aspect-[4/3] w-full object-cover lg:aspect-[4/5]"
+            alt="Sesión presencial de Natural Flow English en un café de Cali, con laptop y cuaderno"
+            className="aspect-[4/3] w-full max-w-full object-cover"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-ink/10" />
