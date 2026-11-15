@@ -8,13 +8,13 @@ export const COMPARISON = [
   {
     obsolete: "Diálogos lentos, robóticos y desconectados de la realidad.",
     natural:
-      "Inmersión y práctica en vivo con frases útiles (chunks) de uso diario para resolver situaciones en la calle y la oficina.",
+      "Inmersión y práctica en vivo con frases vivas de uso diario para resolver situaciones en la calle y la oficina.",
   },
   {
     obsolete:
       "Profesor pasivo que habla el 80% del tiempo mientras llenas páginas.",
     natural:
-      '120 minutos de juego interactivo, "atajos mentales" y simulacros de vida real donde tú eres el protagonista y hablas bajo presión.',
+      '120 minutos de entrenamiento conversacional activo, "atajos mentales" y simulacros de vida real donde tú eres el protagonista y hablas bajo presión.',
   },
 ];
 
@@ -43,7 +43,7 @@ export const SESSION_STEPS = [
     minutes: 25,
     title: "Inmersión y Frases Vivas",
     description:
-      "Entrenas tu oído con audios reales y dominas las 3 expresiones clave (chunks) que realmente se usan.",
+      "Entrenas tu oído con audios reales y dominas las 3 expresiones clave de la vida real que realmente usan los nativos.",
   },
   {
     number: "04",
