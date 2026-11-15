@@ -1,9 +1,4 @@
-export const WHATSAPP_NUMBER = "573233058573";
+export const ACADEMY_NAME = "Natural Flow English";
 
-export const ACADEMY_NAME = "Fluent Path";
-
-export const ACADEMY_TAGLINE = "Presencial en Cali · Online en todo el mundo";
-
-export function whatsappLink(message) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
+export const DEMO_WHATSAPP_URL =
+  "https://wa.me/573233058573?text=Hola%20Vicente,%20quiero%20agendar%20mi%20Clase%20Demo%20Gratuita%20de%2035%20minutos%20en%20Natural%20Flow%20English.";

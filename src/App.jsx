@@ -1,40 +1,26 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Differentiators from "./components/Differentiators";
-import AudienceTabs from "./components/AudienceTabs";
-import PragmaticChunking from "./components/PragmaticChunking";
-import MethodologySteps from "./components/MethodologySteps";
-import Modality from "./components/Modality";
-import IndustryCurriculum from "./components/IndustryCurriculum";
-import Comparison from "./components/Comparison";
-import LevelTest from "./components/LevelTest";
-import LeadForm from "./components/LeadForm";
+import Difference from "./components/Difference";
+import SessionMethod from "./components/SessionMethod";
+import FinalCta from "./components/FinalCta";
 import WhatsAppFloat from "./components/WhatsAppFloat";
-import { ACADEMY_NAME, ACADEMY_TAGLINE } from "./config";
+import { ACADEMY_NAME } from "./config";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 font-sans antialiased">
+    <div className="min-h-screen bg-ink font-sans antialiased">
       <Navbar />
       <main>
         <Hero />
-        <PragmaticChunking />
-        <Differentiators />
-        <AudienceTabs />
-        <MethodologySteps />
-        <Modality />
-        <IndustryCurriculum />
-        <Comparison />
-        <LevelTest />
-        <LeadForm />
+        <Difference />
+        <SessionMethod />
+        <FinalCta />
       </main>
-      <footer className="border-t border-slate-200 bg-white py-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            © {new Date().getFullYear()} {ACADEMY_NAME} · {ACADEMY_TAGLINE}
-          </span>
-          <span>Empresas y profesionales · Adultos y viajes · Niños</span>
-        </div>
+      <footer className="border-t border-line py-8 pb-24 sm:pb-8">
+        <p className="mx-auto max-w-5xl px-6 text-center text-sm text-pearl/70">
+          {ACADEMY_NAME} • Inglés Práctico Sin Metodologías Obsoletas • Cali,
+          Colombia
+        </p>
       </footer>
       <WhatsAppFloat />
     </div>
